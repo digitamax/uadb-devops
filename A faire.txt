@@ -1,0 +1,14 @@
+Voici l'ensemble des commandes sur lesquelles vous devez travailler et me faire une démonstration de 7min maximum et par groupe de 2 personnes
+
+git init, git status, git add, git commit, git log, git diff, git config, git help, git rm, git mv
+
+
+Partie 2:
+
+git clone, git remote, git remote add, git fetch, git pull, git push, git branch -r, git remote -v, git ls-remote, git remote remove
+
+git branch, git checkout, git switch, git merge, git log --graph, git show, git reflog, git cherry-pick, git merge --abort, git stash
+
+curl -sO http://localhost:30000/jnlpJars/agent.jar
+
+java -jar agent.jar -url http://localhost:30000/ -secret 823caa31849d2b249e85def7d6c03b2df133fe7fe87ab5f56a04e0d0a3abf1cf -name docker -workDir "/home/momozizou" -tunnel localhost:30010
