@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: uadbdevops
-        image: momozizou/uadb
+        image: momozizou/uadb:v1
         resources:
           limits:
             memory: "128Mi"
