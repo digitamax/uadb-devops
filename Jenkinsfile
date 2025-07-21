@@ -9,7 +9,7 @@ pipeline {
         stage('Docker login') {
             steps {
                 script {
-                    sh 'echo $DOCKER_PASSWORD | docker login -u malicksn --password-stdin'
+                    sh 'echo $DOCKER_PASSWORD | docker login -u momozizou --password-stdin'
                 }
             }
         }
