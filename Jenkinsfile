@@ -31,5 +31,14 @@ pipeline {
                 }
             }
         }
+
+         stage('Docker push image') {
+            steps {
+                script {
+                    sh 'docker push momozizou/uadb:v1'
+                }
+            }
+        }
+
     }
 }
