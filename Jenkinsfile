@@ -40,5 +40,21 @@ pipeline {
             }
         }
 
+        stage('Déploiement de l\'application') {
+            steps {
+                script {
+                    sh 'kubectl apply -f ./manifests/deployment.yml'
+                }
+            }
+        }
+
+         stage('Déploiement du service') {
+            steps {
+                script {
+                    sh 'kubectl apply -f ./manifests/service.yml'
+                }
+            }
+        }
+
     }
 }

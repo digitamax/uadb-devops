@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uadbdevops
+spec:
+  selector:
+    matchLabels:
+      app: uadbdevops
+  template:
+    metadata:
+      labels:
+        app: uadbdevops
+    spec:
+      containers:
+      - name: uadbdevops
+        image: momozizou/uadb
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
