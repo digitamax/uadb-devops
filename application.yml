@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: uadbdevops
+    namespace: argocd
+spec:
+    project: default
+
+    source:
+        repoURL: https://github.com/digitamax/uadb-devops.git
+        targetRevision: HEAD
+        path: manifests
+    
+    destination:
+        server: https://kubernetes.default.svc
+        namespace: uadbdevops
+
+    syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
+
+        automated:
+            selfHeal: true
+            prune: true
